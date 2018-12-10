@@ -52,7 +52,8 @@
         $tarifReduit = 6.80;
         $tarifEnfant = 4.50;
 
-        $montant = 0;
+        // J'initialise par défaut mon montant au tarif plein
+        $montant = $tarifPlein;
 
         // http://php.net/manual/fr/language.operators.logical.php
         // SI l'âge est infèrieur à 14 il a un tarif réduit
@@ -65,19 +66,14 @@
         } elseif($ageCapitaine > 60 || $ageCapitaine < 16) {
 
           $montant = $tarifReduit;
-        
-        // Si aucune des conditions n'est remplie, alors c'est tarif plein
-        } else {
-
-          $montant = $tarifPlein; 
 
         }
-          
+        
       ?>
 
       <p>Tarif du Capitaine : <?php echo $montant . " €uro"; ?></p>
 
-      <!-- <p>Tarif du Capitaine : <?= $montant . " €uro"; ?></p> -->
+      <!-- <p>Tarif du Capitaine : <?= $montant; ?> €uro</p> -->
 
       <!-- <?php
         echo '<pre>';
