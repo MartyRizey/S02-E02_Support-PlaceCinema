@@ -16,8 +16,4 @@ Présentation du projet
 			- Afficher ensuite ce tarif dans la page tarif.
 			
 			
-		Organiser les fichiers Suite
-### Suite Suite… Comment faire ?
-	- pour ne pas répéter le code source dans nos fichiers, il faut utiliser l'inclusion de fichiers → video 
-
-
+		
