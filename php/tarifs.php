@@ -43,9 +43,48 @@
       
       <h2>Selon votre âge</h2>
 
-      <p>
-        todo
-      </p>
+      <?php 
+
+        // Etape 1 : Je créé une variable pour l'âge du capitaine
+        $ageCapitaine = 68;
+        // Je créé des variables pour mes tarifs
+        $tarifPlein = 8.30;
+        $tarifReduit = 6.80;
+        $tarifEnfant = 4.50;
+
+        $montant = 0;
+
+        // http://php.net/manual/fr/language.operators.logical.php
+        // SI l'âge est infèrieur à 14 il a un tarif réduit
+        if($ageCapitaine < 14){
+
+          $montant = $tarifEnfant;
+        
+        // Si l'âge du capitaine est supèrieur à 60 ou si l'âge du capitaine est infèrieur à 16
+        // alors il a un tarif réduit
+        } elseif($ageCapitaine > 60 || $ageCapitaine < 16) {
+
+          $montant = $tarifReduit;
+        
+        // Si aucune des conditions n'est remplie, alors c'est tarif plein
+        } else {
+
+          $montant = $tarifPlein; 
+
+        }
+          
+      ?>
+
+      <p>Tarif du Capitaine : <?php echo $montant . " €uro"; ?></p>
+
+      <!-- <p>Tarif du Capitaine : <?= $montant . " €uro"; ?></p> -->
+
+      <!-- <?php
+        echo '<pre>';
+        var_dump($montant);
+        echo '</pre>';
+      ?> -->
+
     </section>
   </main>
   <footer>
