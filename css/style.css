@@ -72,3 +72,19 @@ footer {
   display: flex;
   justify-content: space-between;
 }
+
+/* ajout de css pour le tableau du fichier tarifs.php */
+
+table caption {
+  padding: 1rem;
+}
+
+table tr th,
+table tr td {
+  border-bottom: 1px solid #FFF;
+  padding: 0.5rem 1rem;
+}
+
+table tr td {
+  text-align: center;
+}
