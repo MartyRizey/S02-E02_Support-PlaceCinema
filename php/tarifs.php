@@ -64,8 +64,11 @@
       ?>
 
       <p>Tarif du Capitaine : <?php echo $montant . " €uro"; ?></p>
-      <!-- <p>Tarif du Capitaine : <?= $montant; ?> €uro</p> -->
+      <!-- 
+        syntaxe raccourci : <p>Tarif du Capitaine : <?= $montant; ?> €uro</p>
+      -->
 
+      <!-- Tableau qui affiche l'age et le tarif de la place -->
       <table>
         <thead>
           <tr>
@@ -75,26 +78,22 @@
         </thead>
         <tbody>
 
-        <?php 
-          
-          for($age = 1; $age <= 99; $age++) {  ?>
+        <!-- syntaxe alternative PHP -> http://php.net/manual/fr/control-structures.alternative-syntax.php -->
 
-          <tr>
-            <td>ans</td>
+        <?php for($age = 1; $age <= 99; $age++):  ?>
+
+          <tr>  
+            <!-- dans le <td> on affiche en PHP l'age via la variable $age qui en fait 
+                 compte le nombre d'itération de la boucle for </td> -->      
+            <td><?= $age ?> ans</td>
             <td> €</td>
           </tr>
 
-          <?php }
-        ?>          
+        <?php endfor; ?>          
           
         </tbody>
       </table>
-
-      <!-- <?php
-        echo '<pre>';
-        var_dump($montant);
-        echo '</pre>';
-      ?> -->
+      <!-- fin du tableau -->
 
     </section>
   </main>
