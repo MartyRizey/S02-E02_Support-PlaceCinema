@@ -64,8 +64,31 @@
       ?>
 
       <p>Tarif du Capitaine : <?php echo $montant . " €uro"; ?></p>
-
       <!-- <p>Tarif du Capitaine : <?= $montant; ?> €uro</p> -->
+
+      <table>
+        <thead>
+          <tr>
+            <th>Age</th>
+            <th>Tarif place</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        <?php 
+          
+          for($age = 1; $age <= 99; $age++) {  ?>
+
+          <tr>
+            <td>ans</td>
+            <td> €</td>
+          </tr>
+
+          <?php }
+        ?>          
+          
+        </tbody>
+      </table>
 
       <!-- <?php
         echo '<pre>';
