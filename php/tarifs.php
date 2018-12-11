@@ -1,3 +1,5 @@
+<!-- Ce fichier correspond à la page web affichée dans la fenêtre du navigateur --> 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +12,7 @@
 	<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-
+  
   <?php include '../templates/header.php'; ?>
   
   <main>
@@ -35,32 +37,21 @@
       
       <h2>Selon votre âge</h2>
 
-      <?php 
+      <?php
 
         // Etape 1 : Je créé une variable pour l'âge du capitaine
-        $ageCapitaine = 68;
-        // Je créé des variables pour mes tarifs
-        $tarifPlein = 8.30;
-        $tarifReduit = 6.80;
-        $tarifEnfant = 4.50;
+        $ageCapitaine = 35;
 
-        // J'initialise par défaut mon montant au tarif plein
-        $montant = $tarifPlein;
+        // J'assigne à ma variable $age la valeur de $ageCapitaine
+        $age = $ageCapitaine;
 
-        // http://php.net/manual/fr/language.operators.logical.php
-        // SI l'âge est infèrieur à 14 il a un tarif réduit
-        if($ageCapitaine < 14){
-
-          $montant = $tarifEnfant;
+        // en incluant le code du fichier qui conditionne le tarif par rapport à l'age
+        // je peux tester la valeur de la variable $age qui contient l'age du capitaine,
+        // puisque j'accède à la variable grâce à l'include de calcul_montant.php qui me 
+        // renverra le tarif correspondant.  
         
-        // Si l'âge du capitaine est supèrieur à 60 ou si l'âge du capitaine est infèrieur à 16
-        // alors il a un tarif réduit
-        } elseif($ageCapitaine > 60 || $ageCapitaine < 16) {
+        include '../inc/calcul_montant.php';
 
-          $montant = $tarifReduit;
-
-        }
-        
       ?>
 
       <p>Tarif du Capitaine : <?php echo $montant . " €uro"; ?></p>
@@ -82,11 +73,13 @@
 
         <?php for($age = 1; $age <= 99; $age++):  ?>
 
+          <?php require '../inc/calcul_montant.php';?>
+
           <tr>  
             <!-- dans le <td> on affiche en PHP l'age via la variable $age qui en fait 
                  compte le nombre d'itération de la boucle for </td> -->      
             <td><?= $age ?> ans</td>
-            <td> €</td>
+            <td><?= $montant ?> €</td>
           </tr>
 
         <?php endfor; ?>          
