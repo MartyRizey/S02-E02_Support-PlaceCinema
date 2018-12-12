@@ -1,4 +1,4 @@
-<!-- Ce fichier correspond à la page web affichée dans la fenêtre du navigateur --> 
+<!-- Ce fichier correspond à la page web 'Tarifs' affichée dans la fenêtre du navigateur --> 
 
 <!DOCTYPE html>
 <html>
