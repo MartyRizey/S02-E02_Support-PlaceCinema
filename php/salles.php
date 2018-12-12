@@ -17,11 +17,36 @@
 
   <main>
     <p style="color: olive; font-weight: bold;">je suis la page salles.php</p>
+    <h2 style="text-align: center;"> Liste des films et horaires</h2>
 
     <section>
+        <?php
 
+        // syntaxe récente pour concevoir un tableau en PHP 
+        $movies = [
+            'film 1',
+            'film 2',
+            'film 3',
+            'film 4',
+            'film 5'
+        ];
         
-      <p>TODO</p>
+        // le même tableau avec une syntaxe plus ancienne
+        $movies = array(
+            'film 1',
+            'film 2',
+            'film 3',
+            'film 4',
+            'film 5'
+        );
+
+        // permet de visualiser le contenu de la variable $movies dans la page du navigateur.
+        echo '<pre>';
+        var_dump($movies);
+        echo '</pre>';
+
+        ?>      
+        <p>TODO</p>
     </section>
 
   </main>
