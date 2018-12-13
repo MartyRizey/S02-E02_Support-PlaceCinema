@@ -78,6 +78,24 @@ Déroulé étape par étape - pense-bête
 	  	Générer le code HTML pour afficher le tarif correspondant à coté de l'age.
 	  	
 	  	
+	  Etape 3
+	  -------
+	  	Afficher la liste des films en salle
+	  		+ Création d'un fichier salles.php dans le dossier php
+	  		+ Modifier la navigation dans le fichier header.php du dossier templates, pour avoir un lien pointant vers la page 'Salle'
+	  		+ Mettre la liste des films dans un tableau indexé numériquement.
+	  		+ Parcourir ce tableau avec une boucle for.
+	  			+ et afficher le tableau ou plutôt chaque valeur de chaque index du tableau, dans la page 'Salle'
+	  		+ Faire ensuite du CSS.	
+	  		
+	  		
+	  		
+	  		
+	  		
+	  		
+			
+	  	
+	  	
 		
 	
 	
