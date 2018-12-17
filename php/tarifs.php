@@ -65,6 +65,7 @@
           <tr>
             <th>Age</th>
             <th>Tarif place</th>
+            <th>Tarif abonnement 5 places</th>
           </tr>
         </thead>
         <tbody>
@@ -73,13 +74,17 @@
 
         <?php for($age = 1; $age <= 99; $age++):  ?>
 
-          <?php require '../inc/calcul_montant.php';?>
+          <?php // calcul du montant d'un seul ticket ?>
+          <?php require '../inc/calcul_montant.php'; ?>
+          <?php // calcul de l'abonnement de 5 tickets ?>
+          <?php require '../inc/calcul_abonement.php'; ?>
 
           <tr>  
             <!-- dans le <td> on affiche en PHP l'age via la variable $age qui en fait 
                  compte le nombre d'itération de la boucle for </td> -->      
             <td><?= $age ?> ans</td>
             <td><?= $montant ?> €</td>
+            <td><?= $montantAbonnement ?> €</td>
           </tr>
 
         <?php endfor; ?>          
