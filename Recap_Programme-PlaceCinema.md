@@ -89,6 +89,9 @@ Déroulé étape par étape - pense-bête
 	  		+ Faire ensuite du CSS.	
 	  		
 	  		
+	 BONUS : transformer les includes ou require des fichiers de calcul en fonctions dans le fichier functions.php
+	  		
+	  		
 	  		
 	  		
 	  		

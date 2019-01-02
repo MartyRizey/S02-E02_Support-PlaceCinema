@@ -1,4 +1,5 @@
 <!-- Ce fichier correspond à la page web 'Tarifs' affichée dans la fenêtre du navigateur --> 
+<?php require '../inc/functions.php'; ?>
 
 <!DOCTYPE html>
 <html>
@@ -50,7 +51,8 @@
         // puisque j'accède à la variable grâce à l'include de calcul_montant.php qui me 
         // renverra le tarif correspondant.  
         
-        include '../inc/calcul_montant.php';
+        $montant = calculMontant($age);
+        // include '../inc/calcul_montant.php';
 
       ?>
 
@@ -75,9 +77,12 @@
         <?php for($age = 1; $age <= 99; $age++):  ?>
 
           <?php // calcul du montant d'un seul ticket ?>
-          <?php require '../inc/calcul_montant.php'; ?>
+          <?php // require '../inc/calcul_montant.php'; ?>
+          <?php $montant = calculMontant($age); ?> 
+          
           <?php // calcul de l'abonnement de 5 tickets ?>
-          <?php require '../inc/calcul_abonement.php'; ?>
+          <?php // require '../inc/calcul_abonnement.php'; ?>
+          <?php $montantAbonnement = calculAbonnement($age, $montant); ?>
 
           <tr>  
             <!-- dans le <td> on affiche en PHP l'age via la variable $age qui en fait 
